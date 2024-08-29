@@ -1,21 +1,35 @@
 <!DOCTYPE html>
-<html>
+<html dir="ltr">
     <head>
         <title>Nestor David Menjivar Puertas</title>
+        <link rel="shortcut icon" href="https://c.s-microsoft.com/favicon.ico?v2" />
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width,initial-scale=1" />
         <meta name="title" content="Aplicacion para conversion de unidades de temperatura" />
         <meta name="description" content="Convierte unidades Kelvin, Farenheit y Celcius" />
         <meta name="theme-color" content="#000000" />
+        <link rel="stylesheet" href="css/converter.css"/>
 
     </head>
     <body>
-        <header>TITULAR HEADER</header>
-        <nav>ETIQUETA NAV</nav>
-        <section>ETIQUETA SECTION
-            <article>ETIQUETA ARTICULE</article>
-            <aside>ETIQUETA ASIDE</aside>
-            <footer>ETIQUTA FOOTER</footer>
-        </section>
+        <h1>Convertidor de temperatura</h1>
+        <form id="converter">
+            <label for="input-temp">Temperatura</label>
+            <input type="text" id="input-temp" name="input-temp" value="20"/>
+            <label for="input-temp">de</label>
+            <select id="input-unit" name="input-unit">
+                <option value="c" selected>Celcius</option>
+                <option value="f">Farenheit</option>
+                <option value="k">Kelvin</option>
+            </select>
+            <label for="input-temp">a</label>
+            <select id="output-unit" name="output-unit">
+                <option value="c">Celcius</option>
+                <option value="f" selected >Farenheit</option>
+                <option value="k">Kelvin</option>
+            </select>
+            <output name="output-temp" id="output-temp" for="input-temp input-unit output-unit"> 68 F</output>
+        </form>
     </body>
+    <script src="js/converter.js"></script>
 </html>
