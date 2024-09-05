@@ -9,6 +9,7 @@
         <meta name="description" content="Convierte unidades Kelvin, Farenheit y Celcius" />
         <meta name="theme-color" content="#000000" />
         <link rel="stylesheet" href="css/converter.css"/>
+        <link rel="manifest" href="manifest.json" />
 
     </head>
     <body>
@@ -32,4 +33,9 @@
         </form>
     </body>
     <script src="js/converter.js"></script>
+    <script>
+        if('serviceWorker' in navigator){
+            navigator.serviceWorker.register('sw.js' , {scope: './'});
+        }
+    </script>
 </html>
